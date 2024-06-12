@@ -1,1 +1,1 @@
-This is a test project to kick start my career in JS
+This is a test project test some JS stuff
