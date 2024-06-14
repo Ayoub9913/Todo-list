@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(100, 100, 188);
+    background-color: #352f5b;
     box-sizing: border-box;
     background-image: url("paper.avif");
 }
@@ -34,7 +34,7 @@ body {
     font-size: 80%;
 }
 #search::placeholder {
-    color: white;
+    color: black;
     opacity: 0.3; 
     margin: auto;
     padding: 15px;
@@ -90,7 +90,7 @@ body {
     font-size: 80%;
 }
 #todotoadd::placeholder {
-    color: white;
+    color: black;
     opacity: 0.3; 
     margin: auto;
     padding: 15px;
