@@ -1,14 +1,13 @@
 const listtodos=document.querySelector('.listoftodos');
 const form=document.querySelector('.listform');
+const searchinput=document.querySelector('#search');
 
 const addtolist=string => { 
     
      listtodos.innerHTML+=`
-     <div class="list-item">
-                 <li class="li-text">${string}<li> 
-                 <i class="fas fa-trash"></i></li>
-                </li>
-     </div>`
+                 <li class="list-item li-text">${string}
+                <i class="fas fa-trash"></i>
+            </li>`
 
 }
 form.addEventListener("submit",e=>{
@@ -22,7 +21,22 @@ form.addEventListener("submit",e=>{
 
 listtodos.addEventListener("click",e=>{
     if (e.target.classList.contains("fas")){
-        e.target.parentElement.parentElement.remove();
+        e.target.parentElement.remove();
     }
+})
+
+const filteritems=(term) => { 
+    Array.from(listtodos.children)
+    .filter((todo) =>  !todo.innerText.includes(term) )
+    .forEach((todo) =>  todo.classList.add("hiddenli") );
+
+    Array.from(listtodos.children)
+    .filter((todo) =>  todo.innerText.includes(term) )
+    .forEach((todo) => todo.classList.remove("hiddenli") );
+ }
+
+searchinput.addEventListener("keyup",()=>{
+    const term=searchinput.value.trim();
+    filteritems(term);
 })
 
