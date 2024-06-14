@@ -49,6 +49,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 80%;
+    margin-top: auto;
 }
 
 .hiddenli{
@@ -71,6 +72,7 @@ body {
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    min-height: 20px;
 }
 .li-text{
     width: 90%;

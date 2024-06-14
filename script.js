@@ -5,7 +5,7 @@ const searchinput=document.querySelector('#search');
 const addtolist=string => { 
     
      listtodos.innerHTML+=`
-                 <li class="list-item li-text">${string}
+                 <li class="list-group-item list-item li-text d-flex justify-content-between align-items-center">${string}
                 <i class="fas fa-trash"></i>
             </li>`
 
